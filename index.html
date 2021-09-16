@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Murilo Gemi De Carli</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Oswald', sans-serif;
+        }
+        body{
+            background: #6a040f;
+        }
+        .area{
+            background: #03071e;
+            border-right: solid 5px #370617;
+            box-sizing: content-box;
+            height: 668px;
+            width: 250px;
+        }
+        .menu{
+            display: inline-block;
+        }
+        .menu ul{
+            margin: 0;
+            padding: 0;
+        }
+        li a{
+            display: block;
+            margin: 50px;
+            font-size: 25px;
+            color: white;
+            text-decoration: none;
+        }
+        .logo{
+            display: block;
+            height: 100px;
+            padding: 0 80px;
+        }
+        .logo img{
+            height: 100%;
+            border: solid 1px #000;
+            border-radius: 50%;
+        }
+        .titulo{
+            padding: 20px;
+            font-size: 30px;
+            color: white;
+            margin-left: 20px;
+        }
+        .menu a:hover,
+        .menu a.selected{
+            background-color: #9d0208;
+            border: solid 1px #000;
+            border-radius: 10px;
+            color: #faa307;
+        }
+        .principal{
+            display: inline-block;
+            position: absolute;
+            bottom: 0px;
+            left: 300px;
+            color: #ffba08;
+        }
+        .principal h4{
+            font-size: 50px;
+            color: #e85d04;
+        }
+        .principal li{
+            text-decoration: none;
+            list-style: none;
+        }
+        .principal a{
+            color: #fff;
+            display: flex;
+        }
+        .redes a{
+            display: flex;
+            color: #ffba08;
+        }
+        .principal p{
+            margin: 10px 0px;
+        }
+    </style>
+    <script>
+        window.onhashchange = function(e){
+            const oldURL = e.oldURL.split('#')[1]
+            const newURL = e.newURL.split('#')[1]
+            const oldLink = document.querySelector(`.menu [href='#${oldURL}`)
+            const newLink = document.querySelector(`.menu [href='#${newURL}`)
+            oldLink && oldLink.classList.remove('selected')
+            newLink && newLink.classList.add('selected')
+        }
+    </script>
+</head>
+<body>
+    <aside class="area">
+        <h4 class="titulo">Murilo De Carli</h4>
+        <div class="logo">
+            <a href="#whoami">
+            <img src="/fotonadave.jpeg">
+            </a>
+        </div>
+        <nav class="menu">
+            <ul>
+                <li>
+                    <a href="#whoami">Quem sou eu?</a>
+                </li>
+                <li>
+                    <a href="#habilidades">Habilidades</a>
+                </li>
+                <li>
+                    <a href="#social">Redes sociais</a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+    <section class="principal">
+        <h4>Quem sou eu?</h4>
+        <p>Meu nome é Murilo Gemi De Carli, tenho 18 anos, sou natural de Concórdia, Santa Catarina e atualmente<br>
+             estou cursando o primeiro semestre de ciências da computação,
+            na Universidade Federal da Fronteira Sul. <br> 
+            Meu objetivo é me tornar um bom desenvolvedor em tecnologias em geral.
+        </p>
+        <h4>Habilidades</h4>
+        <p>Estou estudando as tecnologias: Python, HTML, CSS e Javascript, após me sentir seguro nessas tecnologias irei partir para bootstrap e react.</p>
+        <h4>Redes sociais</h4>
+        <div class="redes">
+            <li>
+                <ul>
+                    <a href="https://twitter.com/muriiloodc">Twitter</a>
+                </ul>
+                <ul>
+                    <a href="https://www.linkedin.com/in/murilo-de-carli-9567bb19a/">Linkedin</a>
+                </ul>
+                <ul>
+                    <a href="https://github.com/murilodc">Github</a>
+                </ul>
+            </li>
+        </div>
+    </section>
+</body>
+</html>
